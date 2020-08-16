@@ -1,0 +1,17 @@
+{
+    "name": "ivan/webinar_shop",
+    "authors": [
+        {
+            "name": "Tcoi9428",
+            "email": "Tcoi9428@github.com"
+        }
+    ],
+    "require": {
+        "smarty/smarty": "2.6.31"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    }
+}

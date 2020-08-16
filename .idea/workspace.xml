@@ -1,25 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="41bfa380-7fd4-4b79-833d-c01cf9e38cc3" name="Default Changelist" comment="" />
+    <list default="true" id="41bfa380-7fd4-4b79-833d-c01cf9e38cc3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Controller/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Model/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Service/UserService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/categories/view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/css/shop-homepage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/jquery/jquery.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/jquery/jquery.slim.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/jquery/jquery.slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/jquery/jquery.slim.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/scripts/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/categories/view.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%19^196^196A0685%%bottom.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%41^41C^41C50938%%view.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%45^45E^45E480CD%%index.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%5C^5C8^5C8BCA96%%view.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%8B^8BC^8BC89C66%%header.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%E2^E24^E244E49B%%edit.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%EC^EC7^EC7E73F4%%index.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%F7^F7F^F7F34188%%header.tpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%FF^FF0^FF0A2735%%edit.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Webinar_shop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Webinar_shop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Second-shop" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
-    <execution />
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/smarty/smarty" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
   </component>
   <component name="ProjectId" id="1frdx62Cy98BL8enqKn8t86nZ4t" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/categories" />
+      <recent name="$PROJECT_DIR$/templates/product" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -29,11 +119,63 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596980388511</updated>
-      <workItem from="1596980389594" duration="314000" />
+      <workItem from="1596980389594" duration="1057000" />
+      <workItem from="1596981448299" duration="8924000" />
+      <workItem from="1597253491308" duration="4981000" />
+      <workItem from="1597563131221" duration="4564000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="674" y="0" key="#PHP" timestamp="1597254650931">
+      <screen x="0" y="0" width="1920" height="905" />
+    </state>
+    <state x="674" y="0" key="#PHP/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1597254650931" />
+    <state x="638" y="315" width="634" height="409" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596984010059">
+      <screen x="0" y="0" width="1920" height="905" />
+    </state>
+    <state x="638" y="315" width="634" height="409" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1596984010059" />
+    <state x="715" y="224" width="480" height="598" key="#com.intellij.ide.util.MemberChooser" timestamp="1597254653927">
+      <screen x="0" y="0" width="1920" height="905" />
+    </state>
+    <state x="715" y="224" width="480" height="598" key="#com.intellij.ide.util.MemberChooser/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1597254653927" />
+    <state x="693" y="274" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597569685804">
+      <screen x="0" y="0" width="1920" height="905" />
+    </state>
+    <state x="693" y="274" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1597569685804" />
+    <state x="662" y="429" width="586" height="282" key="ComposerInitDialogKey" timestamp="1596983773004">
+      <screen x="0" y="0" width="1920" height="905" />
+    </state>
+    <state x="662" y="429" width="586" height="282" key="ComposerInitDialogKey/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1596983773004" />
+    <state x="735" y="274" key="FileChooserDialogImpl" timestamp="1596983508447">
+      <screen x="0" y="0" width="1920" height="905" />
+    </state>
+    <state x="735" y="274" key="FileChooserDialogImpl/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1596983508447" />
+    <state x="733" y="439" width="444" height="160" key="NewPhpFileDialog" timestamp="1597257614509">
+      <screen x="0" y="0" width="1920" height="905" />
+    </state>
+    <state x="733" y="439" width="444" height="160" key="NewPhpFileDialog/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1597257614509" />
+    <state x="434" y="151" width="1052" height="737" key="SettingsEditor" timestamp="1597258444333">
+      <screen x="0" y="0" width="1920" height="905" />
+    </state>
+    <state x="434" y="151" width="1052" height="737" key="SettingsEditor/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1597258444333" />
   </component>
 </project>
