@@ -30,7 +30,8 @@
                 </div>
             </div>
         </div>
-</div>
 {/foreach}
+</div>
+
 <!-- /.row -->
 {include file="bottom.tpl"}

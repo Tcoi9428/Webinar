@@ -66,7 +66,9 @@
 {foreach from=$products.items item=product}
     <div class="col-lg-4 col-md-4 mb-4">
         <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            {foreach from=$images item=image}
+                <a href="#"><img class="card-img-top" src=""></a>
+            {/foreach}
             <div class="card-body">
                 <div class="product-article">{$product->getArticle()}</div>
                 <h4 class="card-title">

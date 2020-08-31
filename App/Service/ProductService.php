@@ -7,6 +7,7 @@ use App\Model\Category;
 use App\Model\Model;
 use App\Model\Product;
 use App\Model\Vendor;
+use App\Service\ProductImageService;
 
 class ProductService
 {
@@ -22,9 +23,9 @@ class ProductService
         /**
          * @var $result Model
          */
-        $result = DataBase()->fetchRow($query ,Model::class);
+        $result = DataBase()->fetchRow($query,Model::class);
 
-        return (int) $result->getProperty('count')?? 0 ;
+        return (int) $result;
 
     }
     public static  function getList(int $start = 0 , int $limit = 20)
@@ -45,23 +46,24 @@ class ProductService
     {
         $product_id = $product_id;
         $query = " SELECT * FROM products WHERE id=$product_id";
-        $product = DataBase()->fetchRow($query ,Product::class);
+        $product = DataBase()->fetchRow($query, Product::class);
         self::getCategoriesIdsForProduct($product);
         return $product;
     }
-    public static function save(Product $product)
+    public static function save(Product $product )
     {
         $data = [
-          'name'=> $product->getName(),
-          'price'=> $product->getPrice(),
-          'amount'=> $product->getAmount(),
+            'name'=> $product->getName(),
+            'price'=> $product->getPrice(),
+            'amount'=> $product->getAmount(),
             'article'=> $product->getArticle(),
-          'description' => $product->getDescription()
+            'description' => $product->getDescription()
         ];
-        
+
         $product_id = $product->getId();
         if (is_null($product_id)|| $product_id < 0){
-             $product_id = DataBase()->insert('products',$data);
+            $product_id = DataBase()->insert('products',$data);
+             ProductImageService::addImagesForProduct($product_id);
         }
         else{
             DataBase()->update('products' , $data , 'id='.$product_id);
@@ -75,8 +77,9 @@ class ProductService
     {
         $delete_id = RequestService::getIntFromPost('product_id');
         if($delete_id){
-             DataBase()->deleteItem('products','id='."$delete_id");
-             DataBase()->deleteItem('products_categories','product_id='.$delete_id);
+            DataBase()->deleteItem('products','id='. $delete_id);
+            DataBase()->deleteItem('products_categories','product_id='.$delete_id);
+            ProductImageService::deleteById($delete_id);
         }
     }
     private static function insertCategories(int $product_id , array $category_ids)
@@ -84,8 +87,8 @@ class ProductService
         $category_ids = array_unique($category_ids);
         foreach ($category_ids as $category_id){
             DataBase()->insert('products_categories',[
-               'product_id' => $product_id,
-               'category_id' => $category_id
+                'product_id' => $product_id,
+                'category_id' => $category_id
             ]);
         }
     }

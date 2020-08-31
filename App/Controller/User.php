@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Service\MailerService;
 use App\Service\RequestService;
+use App\Service\ResponceService;
 use App\Service\UserService;
 use mysql_xdevapi\Exception;
 
@@ -34,13 +35,13 @@ class User
         }
 
         $_SESSION['user_id'] = $user->getId();
-        RequestService::redirect('/');
+        ResponceService::redirect('/');
     }
 
     public static function logout()
     {
        unset($_SESSION['user_id']);
-        RequestService::redirect('/');
+        ResponceService::redirect('/');
     }
 
     public static function edit()
@@ -72,6 +73,6 @@ class User
         $user->setPassword($password);
 
         UserService::save($user);
-        RequestService::redirect('/');
+        ResponceService::redirect('/');
     }
 }

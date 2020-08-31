@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2020-08-16 09:25:15
+<?php /* Smarty version 2.6.31, created on 2020-08-29 10:02:33
          compiled from index.tpl */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "header.tpl", 'smarty_include_vars' => array()));
@@ -11,7 +11,11 @@ unset($_smarty_tpl_vars);
 ?>
     <div class="col-lg-4 col-md-4 mb-4">
         <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <?php $_from = $this->_tpl_vars['images']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['image']):
+?>
+                <a href="#"><img class="card-img-top" src=""></a>
+            <?php endforeach; endif; unset($_from); ?>
             <div class="card-body">
                 <div class="product-article"><?php echo $this->_tpl_vars['product']->getArticle(); ?>
 </div>

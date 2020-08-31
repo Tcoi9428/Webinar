@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2020-08-16 09:25:21
+<?php /* Smarty version 2.6.31, created on 2020-08-23 10:07:20
          compiled from categories/view.tpl */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "header.tpl", 'smarty_include_vars' => array()));
@@ -46,8 +46,9 @@ unset($_smarty_tpl_vars);
                 </div>
             </div>
         </div>
-</div>
 <?php endforeach; endif; unset($_from); ?>
+</div>
+
 <!-- /.row -->
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "bottom.tpl", 'smarty_include_vars' => array()));

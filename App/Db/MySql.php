@@ -52,6 +52,7 @@ class MySql
         $result = $this->query($query);
         return mysqli_fetch_object($result, $class_name);
     }
+
     public function insert( string $table_name , array $values)
     {
         $table_name = $this->escape($table_name);

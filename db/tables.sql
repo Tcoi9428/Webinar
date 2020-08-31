@@ -33,3 +33,11 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `product_images` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `product_id` int(10) unsigned NOT NULL,
+  `category_id` int(10) unsigned NOT NULL,
+  `path` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -1,6 +1,6 @@
 {include file = 'header.tpl'}
 
-<form action="/products/editing.php" method="post">
+<form action="/products/editing.php" method="post" enctype="multipart/form-data">
     <input type="hidden" value="{$product->getId()}" name="product_id">
     <div class="form-group">
         <label for="product_name">Название товара</label>
@@ -29,6 +29,10 @@
     <div class="form-group">
         <label for="product_description">Описание товара</label>
         <textarea id="product_description" name="description" class="form-control" rows="3">{$product->getDescription()}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="product_description">Изображения товара</label>
+        <input id="images" type="file" name="images[]" class="form-control" multiple>
     </div>
     <button type="submit" class="btn btn-primary mb-2">Добавить</button>
 </form>

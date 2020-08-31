@@ -49,13 +49,14 @@ class RequestService
     {
         return (array) static::getRawFromGet($key, $default);
     }
+
     public static  function getAllFromPost()
     {
         return $_POST;
     }
-    public static function redirect(string $path)
+    public static function getFiles(string $key , $default = null)
     {
-        header('Location: ' . $path);
+        return (array) $_FILES[$key] ?? $default;
     }
 
     private static function getRawFromPost(string $key, $default = null)
@@ -66,5 +67,9 @@ class RequestService
     private static function getRawFromGet(string $key, $default = null)
     {
         return $_GET[$key] ?? $default;
+    }
+    public static function redirect(string $path)
+    {
+        header('Location: ' . $path);
     }
 }

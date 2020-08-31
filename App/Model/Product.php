@@ -14,7 +14,7 @@ class Product
     /**
      * @var string
      */
-    protected $name;
+    protected $name='';
 
     /**
      * @var float
@@ -41,7 +41,6 @@ class Product
      * @var string
      */
     protected $article = '';
-
 
     /**
      * @return int
@@ -149,5 +148,4 @@ class Product
     {
         $this->article = $article;
     }
-
 }

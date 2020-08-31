@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2020-08-12 17:59:54
+<?php /* Smarty version 2.6.31, created on 2020-08-17 06:59:02
          compiled from product/edit.tpl */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'header.tpl', 'smarty_include_vars' => array()));
@@ -6,7 +6,7 @@ $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
 
-<form action="/products/editing.php" method="post">
+<form action="/products/editing.php" method="post" enctype="multipart/form-data">
     <input type="hidden" value="<?php echo $this->_tpl_vars['product']->getId(); ?>
 " name="product_id">
     <div class="form-group">
@@ -47,6 +47,10 @@ unset($_smarty_tpl_vars);
         <label for="product_description">Описание товара</label>
         <textarea id="product_description" name="description" class="form-control" rows="3"><?php echo $this->_tpl_vars['product']->getDescription(); ?>
 </textarea>
+    </div>
+    <div class="form-group">
+        <label for="product_description">Изображения товара</label>
+        <input id="images" type="file" name="images[]" class="form-control" multiple>
     </div>
     <button type="submit" class="btn btn-primary mb-2">Добавить</button>
 </form>

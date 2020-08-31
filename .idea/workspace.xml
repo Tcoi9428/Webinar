@@ -20,53 +20,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41bfa380-7fd4-4b79-833d-c01cf9e38cc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Controller/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Model/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Service/UserService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/categories/view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/css/shop-homepage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/jquery/jquery.min.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/jquery/jquery.slim.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/jquery/jquery.slim.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/jquery/jquery.slim.min.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scripts/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/categories/view.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%19^196^196A0685%%bottom.tpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%41^41C^41C50938%%view.tpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%45^45E^45E480CD%%index.tpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%5C^5C8^5C8BCA96%%view.tpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%8B^8BC^8BC89C66%%header.tpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%E2^E24^E244E49B%%edit.tpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%EC^EC7^EC7E73F4%%index.tpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%F7^F7F^F7F34188%%header.tpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/var/templates/compile/%%FF^FF0^FF0A2735%%edit.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Webinar_shop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Webinar_shop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Model/ProductImage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Service/ProductImageService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Service/ResponceService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/28/chainic.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/28/chainik2.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/29/chainic.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/29/chainik2.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/30/chainic.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/30/chainik2.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/31/chainic.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/31/chainik2.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/32/chainic.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/32/chainik2.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/33/chainic.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/33/chainik2.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/34/chainic.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/34/chainik2.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/35/chainic.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/35/chainik2.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/36/chainic.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/36/chainik2.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/37/chainic.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/products/37/chainik2.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Second-shop" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controller/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controller/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controller/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controller/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controller/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controller/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Db/MySql.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Db/MySql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Model/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Service/ProductService.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Service/ProductService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Service/RequestService.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Service/RequestService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/tables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/categories/view.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/view.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/edit.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/edit.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/templates/compile/%%45^45E^45E480CD%%index.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/templates/compile/%%45^45E^45E480CD%%index.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/templates/compile/%%5C^5C8^5C8BCA96%%view.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/templates/compile/%%5C^5C8^5C8BCA96%%view.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/templates/compile/%%E2^E24^E244E49B%%edit.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/templates/compile/%%E2^E24^E244E49B%%edit.tpl.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +98,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -122,7 +117,22 @@
       <workItem from="1596980389594" duration="1057000" />
       <workItem from="1596981448299" duration="8924000" />
       <workItem from="1597253491308" duration="4981000" />
-      <workItem from="1597563131221" duration="4564000" />
+      <workItem from="1597563131221" duration="5597000" />
+      <workItem from="1597644825886" duration="5445000" />
+      <workItem from="1597823829976" duration="4000" />
+      <workItem from="1598172947451" duration="8211000" />
+      <workItem from="1598181293102" duration="2536000" />
+      <workItem from="1598693188319" duration="6120000" />
+      <workItem from="1598699362735" duration="79000" />
+      <workItem from="1598699467406" duration="5880000" />
+      <workItem from="1598850327733" duration="11000" />
+      <workItem from="1598850547168" duration="294000" />
+      <workItem from="1598850928519" duration="454000" />
+      <workItem from="1598851446805" duration="1818000" />
+      <workItem from="1598853282439" duration="599000" />
+      <workItem from="1598855629282" duration="1793000" />
+      <workItem from="1598857474062" duration="1650000" />
+      <workItem from="1598859320708" duration="394000" />
     </task>
     <servers />
   </component>
@@ -153,10 +163,15 @@
       <screen x="0" y="0" width="1920" height="905" />
     </state>
     <state x="638" y="315" width="634" height="409" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1596984010059" />
-    <state x="715" y="224" width="480" height="598" key="#com.intellij.ide.util.MemberChooser" timestamp="1597254653927">
-      <screen x="0" y="0" width="1920" height="905" />
+    <state x="2635" y="267" width="480" height="576" key="#com.intellij.ide.util.MemberChooser" timestamp="1598695480318">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2635" y="267" width="480" height="576" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1032/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598695480318" />
     <state x="715" y="224" width="480" height="598" key="#com.intellij.ide.util.MemberChooser/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1597254653927" />
+    <state x="2609" y="0" width="523" height="1032" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598700633056">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2609" y="0" width="523" height="1032" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1032/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598700633056" />
     <state x="693" y="274" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597569685804">
       <screen x="0" y="0" width="1920" height="905" />
     </state>
@@ -169,6 +184,11 @@
       <screen x="0" y="0" width="1920" height="905" />
     </state>
     <state x="735" y="274" key="FileChooserDialogImpl/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1596983508447" />
+    <state x="2577" y="225" width="596" height="588" key="NewPhpClassDialog" timestamp="1598700847149">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2577" y="225" width="596" height="588" key="NewPhpClassDialog/0.0.1920.1032/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598700847149" />
+    <state x="2577" y="342" width="596" height="588" key="NewPhpClassDialog/1920.117.1920.1080/0.0.1920.1032@1920.117.1920.1080" timestamp="1597645811999" />
     <state x="733" y="439" width="444" height="160" key="NewPhpFileDialog" timestamp="1597257614509">
       <screen x="0" y="0" width="1920" height="905" />
     </state>

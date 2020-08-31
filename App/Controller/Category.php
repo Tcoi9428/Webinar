@@ -8,6 +8,7 @@ use App\Service\ProductService;
 use App\Service\RequestService;
 use App\Service\CategoryService;
 use  App\Model\Category as CategoryModel;
+use App\Service\ResponceService;
 
 class Category
 {
@@ -58,6 +59,6 @@ class Category
     }
     private static function redirectToList()
     {
-        RequestService::redirect('/categories/');
+        ResponceService::redirect('/categories/');
     }
 }
