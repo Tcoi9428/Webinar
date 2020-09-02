@@ -18,7 +18,8 @@
 <!-- Bootstrap core JavaScript -->
 <script src="/scripts/jquery/jquery.min.js"></script>
 <script src="/scripts/js/bootstrap.bundle.min.js"></script>
-
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="/scripts/js/main.js"></script>
 </body>
 
 </html>

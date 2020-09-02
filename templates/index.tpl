@@ -66,9 +66,11 @@
 {foreach from=$products.items item=product}
     <div class="col-lg-4 col-md-4 mb-4">
         <div class="card h-100">
-            {foreach from=$images item=image}
-                <a href="#"><img class="card-img-top" src=""></a>
-            {/foreach}
+            <div class="slider-images">
+                {foreach from=$product->getImages() item=image name=foo}
+                    <a href="#"><img class="card-img-top" src="{$image->getPath()}"></a>
+                {/foreach}
+            </div>
             <div class="card-body">
                 <div class="product-article">{$product->getArticle()}</div>
                 <h4 class="card-title">

@@ -4,6 +4,9 @@
 namespace App\Controller;
 
 
+use App\Model\Model;
+use App\Model\Product as ProductModel;
+use App\Service\ProductImageService;
 use App\Service\ProductService;
 use App\Service\RequestService;
 use App\Service\CategoryService;
@@ -24,11 +27,11 @@ class Category
         $category_id = RequestService::getIntFromGet('category_id');
         $categories = CategoryService::getList();
         $products = CategoryService::getProductsListByCategories($category_id);
+        self::getImagesForProduct($products);
         smarty()->assign_by_ref('products',$products);
         smarty()->assign_by_ref('categories',$categories);
         smarty()->display('categories/view.tpl');
     }
-
     public  static function edit()
     {
         $category_id = RequestService::getIntFromGet('category_id');

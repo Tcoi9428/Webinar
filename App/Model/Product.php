@@ -43,6 +43,12 @@ class Product
     protected $article = '';
 
     /**
+     * @var array
+     */
+    protected $images = [];
+
+
+    /**
      * @return int
      */
     public function getId()
@@ -147,5 +153,21 @@ class Product
     public function setArticle(string $article)
     {
         $this->article = $article;
+    }
+
+    /**
+     * @return array
+     */
+    public function getImages(): array
+    {
+        return $this->images;
+    }
+
+    /**
+     * @param array $images
+     */
+    public function setImages(array $images): void
+    {
+        $this->images = $images;
     }
 }

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2020-08-12 18:09:24
+<?php /* Smarty version 2.6.31, created on 2020-08-31 09:51:09
          compiled from ./header.tpl */ ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +62,8 @@
                 <?php $_from = $this->_tpl_vars['categories']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['category']):
 ?>
-                    <a href="" class="list-group-item"><?php echo $this->_tpl_vars['category']->getName(); ?>
+                    <a href="/categories/view.php?category_id=<?php echo $this->_tpl_vars['category']->getId(); ?>
+" class="list-group-item"><?php echo $this->_tpl_vars['category']->getName(); ?>
 </a>
                 <?php endforeach; endif; unset($_from); ?>
             </div>

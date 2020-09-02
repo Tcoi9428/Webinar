@@ -4,11 +4,13 @@
 namespace App\Controller;
 
 
-use App\Model\ProductImage;
+use App\Model\ProductImage as ProductImagesModel;
 use App\Service\CategoryService;
+use App\Service\ProductImageService;
 use App\Service\ProductService;
 use App\Service\RequestService;
 use App\Model\Product as ProductModel;
+
 
 class Product
 {
@@ -36,6 +38,7 @@ class Product
             'pages'=> ceil($products['count']/$per_page),
             'current'=> $current_page
         ];
+        self::getImagesForProducts($products['items']);
         smarty()->assign_by_ref('categories',$categories);
         smarty()->assign_by_ref('products',$products);
         smarty()->assign_by_ref('pagination',$pagination);
@@ -64,13 +67,13 @@ class Product
         $article = RequestService::getStringFromPost('article');
         $description = RequestService::getStringFromPost('description');
         $categories_ids = RequestService::getArrayFromPost('categories_ids');
-        
-        $product = new ProductModel();
 
+        $product = new ProductModel();
 
         if($product_id){
             $product = ProductService::getEditItem($product_id);
         }
+
         $product->setName($name);
         $product->setPrice($price);
         $product->setAmount($amount);
@@ -80,6 +83,7 @@ class Product
         foreach ($categories_ids as $category_id){
             $product->addCategoryId($category_id);
         }
+
         ProductService::save($product);
         self::redirectToList();
     }
@@ -92,4 +96,20 @@ class Product
     {
         RequestService::redirect('/');
     }
+    private static function getImagesForProducts(array $products)
+    {
+        foreach ($products as &$product){
+            /**
+             * @var ProductModel $product
+             */
+            $id = $product->getId();
+
+            $images = ProductImageService::getImagesByProductId($id);
+            /**
+             * @var ProductModel $product
+             */
+            $product->setImages($images);
+        }
+    }
+
 }

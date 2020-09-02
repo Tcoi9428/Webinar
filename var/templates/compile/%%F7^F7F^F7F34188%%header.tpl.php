@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2020-08-16 07:58:13
+<?php /* Smarty version 2.6.31, created on 2020-09-02 12:14:19
          compiled from header.tpl */ ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,13 +10,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shop Homepage - Start Bootstrap Template</title>
+    <title>Webinar Shop</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/scripts/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="/scripts/css/shop-homepage.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 </head>
 

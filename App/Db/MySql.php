@@ -47,6 +47,16 @@ class MySql
         }
         return $data;
     }
+    public function fetchArray($query)
+    {
+        $result = $this->query($query);
+        $data = [];
+        while($row = mysqli_fetch_array($result)) {
+            $data[] = $row;
+        }
+        return $data;
+    }
+
     public function fetchRow($query, string $class_name)
     {
         $result = $this->query($query);
@@ -72,9 +82,6 @@ class MySql
     }
     public  function update(string $table_name , array $values , string $where)
     {
-        $table_name = $table_name;
-        $values = $values;
-        $where = $where;
         $insert_values = [];
         foreach ($values as $key=> $value){
             $insert_values[] = "$key"."=" ."'$value'";

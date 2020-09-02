@@ -6,6 +6,7 @@ namespace App\Service;
 use App\Model\Category;
 use App\Model\Model;
 use App\Model\Product;
+use App\Model\ProductImage;
 use App\Model\Vendor;
 use App\Service\ProductImageService;
 
@@ -44,7 +45,6 @@ class ProductService
      */
     public static function getEditItem( int $product_id) : Product
     {
-        $product_id = $product_id;
         $query = " SELECT * FROM products WHERE id=$product_id";
         $product = DataBase()->fetchRow($query, Product::class);
         self::getCategoriesIdsForProduct($product);
@@ -61,12 +61,14 @@ class ProductService
         ];
 
         $product_id = $product->getId();
+
         if (is_null($product_id)|| $product_id < 0){
             $product_id = DataBase()->insert('products',$data);
              ProductImageService::addImagesForProduct($product_id);
         }
         else{
             DataBase()->update('products' , $data , 'id='.$product_id);
+            ProductImageService::addImagesForProduct($product_id);
             self::clearCategoryList($product);
         }
         self::insertCategories($product_id , $product->getCategoriesIds());

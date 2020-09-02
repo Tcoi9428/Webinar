@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2020-08-09 15:00:33
+<?php /* Smarty version 2.6.31, created on 2020-09-02 12:15:08
          compiled from bottom.tpl */ ?>
 </div>
 <!-- /.col-lg-9 -->
@@ -20,7 +20,8 @@
 <!-- Bootstrap core JavaScript -->
 <script src="/scripts/jquery/jquery.min.js"></script>
 <script src="/scripts/js/bootstrap.bundle.min.js"></script>
-
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="/scripts/js/main.js"></script>
 </body>
 
 </html>

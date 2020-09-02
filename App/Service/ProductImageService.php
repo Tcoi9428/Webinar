@@ -3,7 +3,7 @@
 namespace App\Service;
 
 use App\Db\MySql;
-use App\Product\ProductImage;
+use App\Model\ProductImage;
 
 class ProductImageService
 {
@@ -40,9 +40,15 @@ class ProductImageService
     {
         return DataBase()->deleteItem('product_images','product_id='. $product_id);
     }
+
+    public static function getImagesByProductId($product_id)
+    {
+        $query = "SELECT * FROM product_images WHERE product_id = $product_id";
+        $images = DataBase()->fetchAll($query,ProductImage::class);
+        return $images;
+    }
     public static function addImagesForProduct($product_id)
     {
-        $product_id = $product_id;
         $uploadImages = RequestService::getFiles('images');
 
         $imageNames = $uploadImages['name'];

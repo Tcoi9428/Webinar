@@ -1,27 +1,15 @@
 <?php
 
 
-namespace App\Product;
+namespace App\Model;
 
-
-use App\Model\Model;
 
 class ProductImage extends Model
 {
     /**
      * @var int
      */
-    protected $id;
-
-    /**
-     * @var ProductModel
-     */
-    protected $product;
-
-    /**
-     * @var string
-     */
-    protected $name;
+    protected $product_id;
 
     /**
      * @var string
@@ -29,62 +17,23 @@ class ProductImage extends Model
     protected $path;
 
     /**
-     * @var int
+     * @var string
      */
-    protected $size;
+    protected $name;
 
     /**
      * @return int
      */
-    public function getId(): int
+    public function getProductId(): int
     {
-        return $this->id;
+        return $this->product_id;
     }
-
     /**
-     * @param int $id
-     * @return ProductImage
+     * @param int $product_id
      */
-    public function setId(int $id): ProductImage
+    public function setProductId(int $product_id): void
     {
-        $this->id = $id;
-        return $this;
-    }
-
-    /**
-     * @return Product
-     */
-    public function getProduct(): Product
-    {
-        return $this->product;
-    }
-
-    /**
-     * @param Product $product
-     * @return ProductImage
-     */
-    public function setProduct(ProductModel $product): ProductImage
-    {
-        $this->product = $product;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param string $name
-     * @return ProductImage
-     */
-    public function setName(string $name): ProductImage
-    {
-        $this->name = $name;
-        return $this;
+        $this->product_id = $product_id;
     }
 
     /**
@@ -97,29 +46,25 @@ class ProductImage extends Model
 
     /**
      * @param string $path
-     * @return ProductImage
      */
-    public function setPath(string $path): ProductImage
+    public function setPath(string $path): void
     {
         $this->path = $path;
-        return $this;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getSize(): int
+    public function getName(): string
     {
-        return $this->size;
+        return $this->name;
     }
 
     /**
-     * @param int $size
-     * @return ProductImage
+     * @param string $name
      */
-    public function setSize(int $size): ProductImage
+    public function setName(string $name): void
     {
-        $this->size = $size;
-        return $this;
+        $this->name = $name;
     }
 }

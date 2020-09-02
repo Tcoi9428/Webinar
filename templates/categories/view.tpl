@@ -4,7 +4,11 @@
 
         <div class="col-lg-4 col-md-4 mb-4">
             <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                {foreach from=$product->getImages() item=image name=foo}
+                    {if $smarty.foreach.foo.iteration == '1'}
+                        <a href="#"><img class="card-img-top" src="{$image->getPath()}"></a>
+                    {/if}
+                {/foreach}
                 <div class="card-body">
                     <div class="product-article">{$product->getArticle()}</div>
                     <h4 class="card-title">
