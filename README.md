@@ -1,1 +1,1 @@
-# My-shop
+# Webinar-shop
