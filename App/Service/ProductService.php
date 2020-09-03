@@ -7,7 +7,6 @@ use App\Model\Category;
 use App\Model\Model;
 use App\Model\Product;
 use App\Model\ProductImage;
-use App\Model\Vendor;
 use App\Service\ProductImageService;
 
 class ProductService
@@ -81,7 +80,13 @@ class ProductService
         if($delete_id){
             DataBase()->deleteItem('products','id='. $delete_id);
             DataBase()->deleteItem('products_categories','product_id='.$delete_id);
-            ProductImageService::deleteById($delete_id);
+            ProductImageService::deleteByProductId($delete_id);
+        }
+    }
+    public static function deleteProductImage(){
+        $image_id = RequestService::getIntFromPost('product_image_id');
+        if($image_id){
+            ProductImageService::deleteById($image_id);
         }
     }
     private static function insertCategories(int $product_id , array $category_ids)

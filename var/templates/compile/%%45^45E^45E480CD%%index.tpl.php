@@ -1,10 +1,11 @@
-<?php /* Smarty version 2.6.31, created on 2020-09-02 12:14:19
+<?php /* Smarty version 2.6.31, created on 2020-09-03 06:04:19
          compiled from index.tpl */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "header.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
+
 <div class="row">
 <?php $_from = $this->_tpl_vars['products']['items']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['product']):

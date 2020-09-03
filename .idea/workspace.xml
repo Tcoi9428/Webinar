@@ -20,36 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41bfa380-7fd4-4b79-833d-c01cf9e38cc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/scripts/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/products/delete_image.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controller/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controller/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Controller/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controller/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Db/MySql.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Db/MySql.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Model/Product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Model/ProductImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Model/ProductImage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Service/ProductImageService.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Service/ProductImageService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Service/ProductService.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Service/ProductService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scripts/css/shop-homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/scripts/css/shop-homepage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/products/28/chainic.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/products/28/chainik2.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/products/29/chainic.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/products/29/chainik2.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/products/30/chainic.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/products/30/chainik2.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/products/31/chainic.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/products/31/chainik2.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/products/32/chainic.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/upload/products/32/chainik2.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bottom.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bottom.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categories/view.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categories/view.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.tpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/edit.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/edit.tpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/templates/compile/%%45^45E^45E480CD%%index.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/templates/compile/%%45^45E^45E480CD%%index.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/templates/compile/%%5C^5C8^5C8BCA96%%view.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/templates/compile/%%5C^5C8^5C8BCA96%%view.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/templates/compile/%%65^655^6551DB6B%%bottom.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/templates/compile/%%65^655^6551DB6B%%bottom.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/templates/compile/%%8B^8BC^8BC89C66%%header.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/templates/compile/%%8B^8BC^8BC89C66%%header.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/templates/compile/%%F7^F7F^F7F34188%%header.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/templates/compile/%%F7^F7F^F7F34188%%header.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/templates/compile/%%E2^E24^E244E49B%%edit.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/templates/compile/%%E2^E24^E244E49B%%edit.tpl.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +70,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -135,7 +118,8 @@
       <workItem from="1598871624634" duration="347000" />
       <workItem from="1598872259686" duration="2471000" />
       <workItem from="1599030368128" duration="578000" />
-      <workItem from="1599030961774" duration="14507000" />
+      <workItem from="1599030961774" duration="15348000" />
+      <workItem from="1599112962500" duration="18808000" />
     </task>
     <servers />
   </component>
@@ -167,30 +151,30 @@
     </state>
     <state x="555" y="177" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.117.1920.1080/0.0.1920.1032@0.0.1920.1032" timestamp="1599030938972" />
     <state x="2475" y="302" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.117.1920.1080/0.0.1920.1032@1920.117.1920.1080" timestamp="1599031073393" />
-    <state x="638" y="359" width="720" height="467" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599049902901">
+    <state x="638" y="359" width="729" height="467" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599133334915">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="638" y="315" width="634" height="409" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1596984010059" />
-    <state x="638" y="359" width="720" height="467" key="#com.intellij.fileTypes.FileTypeChooser/1920.117.1920.1080/0.0.1920.1032@0.0.1920.1032" timestamp="1599049902901" />
+    <state x="638" y="359" width="729" height="467" key="#com.intellij.fileTypes.FileTypeChooser/1920.117.1920.1080/0.0.1920.1032@0.0.1920.1032" timestamp="1599133334915" />
     <state x="2597" y="468" width="556" height="336" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1598871674436">
       <screen x="1920" y="117" width="1920" height="1080" />
     </state>
     <state x="2597" y="468" width="556" height="336" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/1920.117.1920.1080/0.0.1920.1032@1920.117.1920.1080" timestamp="1598871674436" />
-    <state x="715" y="255" width="480" height="591" key="#com.intellij.ide.util.MemberChooser" timestamp="1599032923864">
+    <state x="715" y="255" width="480" height="591" key="#com.intellij.ide.util.MemberChooser" timestamp="1599126365793">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="2635" y="267" width="480" height="576" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1032/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598695480318" />
     <state x="715" y="224" width="480" height="598" key="#com.intellij.ide.util.MemberChooser/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1597254653927" />
-    <state x="715" y="255" width="480" height="591" key="#com.intellij.ide.util.MemberChooser/1920.117.1920.1080/0.0.1920.1032@0.0.1920.1032" timestamp="1599032923864" />
+    <state x="715" y="255" width="480" height="591" key="#com.intellij.ide.util.MemberChooser/1920.117.1920.1080/0.0.1920.1032@0.0.1920.1032" timestamp="1599126365793" />
     <state x="2609" y="0" width="523" height="1032" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598700633056">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2609" y="0" width="523" height="1032" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1032/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598700633056" />
-    <state x="693" y="312" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599050300783">
+    <state x="693" y="312" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599127830334">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="693" y="274" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1597569685804" />
-    <state x="693" y="312" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.117.1920.1080/0.0.1920.1032@0.0.1920.1032" timestamp="1599050300783" />
+    <state x="693" y="312" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.117.1920.1080/0.0.1920.1032@0.0.1920.1032" timestamp="1599127830334" />
     <state x="662" y="429" width="586" height="282" key="ComposerInitDialogKey" timestamp="1596983773004">
       <screen x="0" y="0" width="1920" height="905" />
     </state>
@@ -204,10 +188,11 @@
     </state>
     <state x="2577" y="225" width="596" height="588" key="NewPhpClassDialog/0.0.1920.1032/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598700847149" />
     <state x="2577" y="342" width="596" height="588" key="NewPhpClassDialog/1920.117.1920.1080/0.0.1920.1032@1920.117.1920.1080" timestamp="1597645811999" />
-    <state x="733" y="439" width="444" height="160" key="NewPhpFileDialog" timestamp="1597257614509">
-      <screen x="0" y="0" width="1920" height="905" />
+    <state x="733" y="501" width="444" height="160" key="NewPhpFileDialog" timestamp="1599127298291">
+      <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="733" y="439" width="444" height="160" key="NewPhpFileDialog/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1597257614509" />
+    <state x="733" y="501" key="NewPhpFileDialog/1920.117.1920.1080/0.0.1920.1032@0.0.1920.1032" timestamp="1599127298291" />
     <state x="2354" y="269" width="1052" height="737" key="SettingsEditor" timestamp="1598872305749">
       <screen x="1920" y="117" width="1920" height="1080" />
     </state>

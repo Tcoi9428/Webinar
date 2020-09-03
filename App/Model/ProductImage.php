@@ -9,6 +9,11 @@ class ProductImage extends Model
     /**
      * @var int
      */
+    protected $id;
+
+    /**
+     * @var int
+     */
     protected $product_id;
 
     /**
@@ -20,6 +25,22 @@ class ProductImage extends Model
      * @var string
      */
     protected $name;
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
 
     /**
      * @return int

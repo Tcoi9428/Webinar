@@ -34,6 +34,45 @@
         <label for="product_description">Изображения товара</label>
         <input id="images" type="file" name="images[]" class="form-control" multiple>
     </div>
+    {if $product->getImages()}
+        <div class="form-group images-group">
+            {foreach from=$product->getImages() item=image}
+            <div class="card">
+                <img src="{$image->getPath()}" class="card-img-top" alt="{$image->getName()}">
+                <div class="card-body">
+                    <button class="btn btn-warning btn-sm delete-image-btn" data-image-id="{$image->getId()}" onclick="return deleteImage(this)">Удалить</button>
+                </div>
+            </div>
+            {/foreach}
+        </div>
+    {/if}
+    {literal}
+        <script>
+            function deleteImage(button){
+                let imageId = $(button).data('imageId');
+                imageId = parseInt(imageId);
+
+                if(!imageId){
+                    alert('Проблема с image_id');
+                    return false;
+                }
+
+                let url = '/products/delete_image.php'
+
+                const formData = new FormData();
+
+                formData.append('product_image_id', imageId);
+
+                fetch(url,{
+                    method: 'POST',
+                    body: formData
+                }).then(() => {
+                    document.location.reload();
+                });
+                return false
+            }
+        </script>
+    {/literal}
     <button type="submit" class="btn btn-primary mb-2">Добавить</button>
 </form>
 {include file = 'bottom.tpl'}

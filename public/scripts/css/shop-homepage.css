@@ -50,8 +50,22 @@
 .slider-images{
     margin-top: 20px;
 }
-
 img.card-img-top{
     max-height: 230px;
     object-fit: contain;
+}
+.images-group{
+    display: flex;
+}
+.images-group .card{
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.images-group .card .card-body{
+    display: flex;
+    align-items: flex-end;
+    flex: 0 0 auto;
 }

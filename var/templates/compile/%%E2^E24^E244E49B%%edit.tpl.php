@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2020-08-17 06:59:02
+<?php /* Smarty version 2.6.31, created on 2020-09-03 12:11:36
          compiled from product/edit.tpl */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'header.tpl', 'smarty_include_vars' => array()));
@@ -52,6 +52,51 @@ unset($_smarty_tpl_vars);
         <label for="product_description">Изображения товара</label>
         <input id="images" type="file" name="images[]" class="form-control" multiple>
     </div>
+    <?php if ($this->_tpl_vars['product']->getImages()): ?>
+        <div class="form-group images-group">
+            <?php $_from = $this->_tpl_vars['product']->getImages(); if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['image']):
+?>
+            <div class="card">
+                <img src="<?php echo $this->_tpl_vars['image']->getPath(); ?>
+" class="card-img-top" alt="<?php echo $this->_tpl_vars['image']->getName(); ?>
+">
+                <div class="card-body">
+                    <button class="btn btn-warning btn-sm delete-image-btn" data-image-id="<?php echo $this->_tpl_vars['image']->getId(); ?>
+" onclick="return deleteImage(this)">Удалить</button>
+                </div>
+            </div>
+            <?php endforeach; endif; unset($_from); ?>
+        </div>
+    <?php endif; ?>
+    <?php echo '
+        <script>
+            function deleteImage(button){
+                let imageId = $(button).data(\'imageId\');
+                imageId = parseInt(imageId);
+
+                if(!imageId){
+                    alert(\'Проблема с image_id\');
+                    return false;
+                }
+
+                let url = \'/products/delete_image.php\'
+
+                const formData = new FormData();
+
+                formData.append(\'product_image_id\', imageId);
+
+                fetch(url,{
+                    method: \'POST\',
+                    body: formData
+                }).then(() => {
+                    document.location.reload();
+                });
+                return false
+            }
+        </script>
+    '; ?>
+
     <button type="submit" class="btn btn-primary mb-2">Добавить</button>
 </form>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;

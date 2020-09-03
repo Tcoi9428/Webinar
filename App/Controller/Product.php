@@ -49,6 +49,7 @@ class Product
         $product_id = RequestService::getIntFromGet('product_id');
         if ($product_id){
             $product = ProductService::getEditItem($product_id);
+            self::getImagesForEditProduct($product);
         }else{
             $product = new  ProductModel();
         }
@@ -92,6 +93,9 @@ class Product
         ProductService::delete();
         self::redirectToList();
     }
+    public static function deleteImage(){
+        ProductService::deleteProductImage();
+    }
     private static function redirectToList()
     {
         RequestService::redirect('/');
@@ -111,5 +115,18 @@ class Product
             $product->setImages($images);
         }
     }
+    private static function getImagesForEditProduct($product)
+    {
+        /**
+         * @var ProductModel $product
+         */
 
+        $id = $product->getId();
+        $images = ProductImageService::getImagesByProductId($id);
+
+        /**
+         * @var ProductModel $product
+         */
+        $product->setImages($images);
+    }
 }

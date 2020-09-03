@@ -29,15 +29,15 @@ class ProductImageService
     }
     public static function deleteById(int $id)
     {
-        $path = APP_UPLOAD_PRODUCT_DIR . '/' . $id;
-
-        self::deleteDir($path);
-
-        self::deleteByProductId($id);
+        return DataBase()->deleteItem('product_images','id='.$id);
     }
 
     public static function deleteByProductId(int $product_id)
     {
+        $path = APP_UPLOAD_PRODUCT_DIR . '/' . $product_id;
+
+        self::deleteDir($path);
+
         return DataBase()->deleteItem('product_images','product_id='. $product_id);
     }
 
@@ -50,31 +50,41 @@ class ProductImageService
     public static function addImagesForProduct($product_id)
     {
         $uploadImages = RequestService::getFiles('images');
+        if( $uploadImages['error'][0] > 0){
+            return false;
+        }
 
-        $imageNames = $uploadImages['name'];
-        $imageTmpNames = $uploadImages['tmp_name'];
+            $imageNames = $uploadImages['name'];
+            $imageTmpNames = $uploadImages['tmp_name'];
 
-
-        $path = APP_UPLOAD_PRODUCT_DIR . '/' . $product_id;
-            if(!file_exists($path)){
+            $getImages = self::getImagesByProductId($product_id);
+            $path = APP_UPLOAD_PRODUCT_DIR . '/' . $product_id;
+            if (!file_exists($path)) {
                 mkdir($path);
             }
+            for ($i = 0; $i < count($imageNames); $i++) {
+                $imageName = basename($imageNames[$i]);
+                $imageTmpName = $imageTmpNames[$i];
 
-        for($i = 0; $i < count($imageNames); $i++){
-            $imageName = basename($imageNames[$i]);
-            $imageTmpName = $imageTmpNames[$i];
+                $imagePath = $path . '/' . $imageName;
 
-            $imagePath = $path . '/' . $imageName;
+                move_uploaded_file($imageTmpName, $imagePath);
 
-            move_uploaded_file($imageTmpName ,$imagePath);
+                $currentImagesNames = [];
+                foreach ($getImages as $currentImageName) {
+                    $currentImagesNames[] = $currentImageName->getName();
+                }
 
-            $data = [
-                'product_id' =>$product_id,
-                'name'=> $imageName,
-                'path'=> str_replace(APP_PUBLIC_DIR,'',$imagePath)
-            ];
-            self::add($data);
-        }
+                $diffImageNames = array_diff($imageNames, $currentImagesNames);
+                if (in_array($imageName, $diffImageNames)) {
+                    $data = [
+                        'product_id' => $product_id,
+                        'name' => $imageName,
+                        'path' => str_replace(APP_PUBLIC_DIR, '', $imagePath)
+                    ];
+                    self::add($data);
+                }
+            }
     }
     private static function deleteDir($dir) {
         $files = array_diff(scandir($dir), array('.','..'));
