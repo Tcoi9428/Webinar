@@ -88,6 +88,9 @@ class ProductService
         if($image_id){
             ProductImageService::deleteById($image_id);
         }
+        else{
+            die('error with image ID');
+        }
     }
     private static function insertCategories(int $product_id , array $category_ids)
     {

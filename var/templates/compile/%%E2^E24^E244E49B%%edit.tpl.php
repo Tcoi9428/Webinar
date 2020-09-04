@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2020-09-03 12:11:36
+<?php /* Smarty version 2.6.31, created on 2020-09-04 10:25:30
          compiled from product/edit.tpl */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'header.tpl', 'smarty_include_vars' => array()));
@@ -49,6 +49,10 @@ unset($_smarty_tpl_vars);
 </textarea>
     </div>
     <div class="form-group">
+        <label for="product_description">Ссылка на изображение для товара:</label>
+        <input id="images" type="text"  name="image_url" class="form-control" multiple>
+    </div>
+    <div class="form-group">
         <label for="product_description">Изображения товара</label>
         <input id="images" type="file" name="images[]" class="form-control" multiple>
     </div>
@@ -89,15 +93,23 @@ unset($_smarty_tpl_vars);
                 fetch(url,{
                     method: \'POST\',
                     body: formData
-                }).then(() => {
-                    document.location.reload();
+                })
+                    .then((responce) => {
+                        responce.text()
+                        .then((text) => {
+                            if(text.indexOf(\'error\') > -1){
+                                alert(\'Ошибка при удалении\');
+                            }else{
+                                document.location.reload();
+                            }
+                    })
                 });
                 return false
             }
         </script>
     '; ?>
 
-    <button type="submit" class="btn btn-primary mb-2">Добавить</button>
+    <button type="submit" class="btn btn-primary mb-2">Сохранить</button>
 </form>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'bottom.tpl', 'smarty_include_vars' => array()));

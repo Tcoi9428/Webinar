@@ -31,6 +31,10 @@
         <textarea id="product_description" name="description" class="form-control" rows="3">{$product->getDescription()}</textarea>
     </div>
     <div class="form-group">
+        <label for="product_description">Ссылка на изображение для товара:</label>
+        <input id="images" type="text"  name="image_url" class="form-control" multiple>
+    </div>
+    <div class="form-group">
         <label for="product_description">Изображения товара</label>
         <input id="images" type="file" name="images[]" class="form-control" multiple>
     </div>
@@ -66,13 +70,21 @@
                 fetch(url,{
                     method: 'POST',
                     body: formData
-                }).then(() => {
-                    document.location.reload();
+                })
+                    .then((responce) => {
+                        responce.text()
+                        .then((text) => {
+                            if(text.indexOf('error') > -1){
+                                alert('Ошибка при удалении');
+                            }else{
+                                document.location.reload();
+                            }
+                    })
                 });
                 return false
             }
         </script>
     {/literal}
-    <button type="submit" class="btn btn-primary mb-2">Добавить</button>
+    <button type="submit" class="btn btn-primary mb-2">Сохранить</button>
 </form>
 {include file = 'bottom.tpl'}

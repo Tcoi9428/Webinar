@@ -49,43 +49,98 @@ class ProductImageService
     }
     public static function addImagesForProduct($product_id)
     {
-        $uploadImages = RequestService::getFiles('images');
+
+        $path = APP_UPLOAD_PRODUCT_DIR . '/' . $product_id;
+        if (!file_exists($path)) {
+            mkdir($path);
+        }
+
+        $imageUrl = RequestService::getStringFromPost('image_url');
+
+        $imageContentTypes = [
+            'image/apng' => '.apng',
+            'image/bmp' => '.bmp',
+            'image/gif' => '.gif',
+            'image/jpeg' => '.jpg',
+            'image/png' => '.png',
+            'image/webp' => '.webp',
+            'image/svg+xml' => '.svg'
+        ];
+
+
+        $headers = get_headers($imageUrl);
+
+        foreach ($headers as $header){
+            $regx = '/(?<=Content-Type: ).+/';
+            preg_match($regx, $header,$contentType);
+            if(!empty($contentType)){
+                $imageType = $contentType[0];
+            }
+        }
+
+        $imageExt = $imageContentTypes[$imageType];
+        if(!is_null($imageExt)){
+            $data = [
+                'product_id' => $product_id,
+                'name' => '',
+                'path' => '',
+            ];
+            $productImageId  = self::add($data);
+
+            $filename = $product_id . '_' . $productImageId . '_upload' . time() . $imageExt;
+            $imagePath = $path . '/' . $filename;
+
+            file_put_contents($imagePath, fopen($imageUrl,'r'));
+
+            $updateData = [
+                'name' => $filename,
+                'path' => str_replace(APP_PUBLIC_DIR ,'',$imagePath)
+            ];
+            self::updateById($productImageId,$updateData);
+        }
+
+        $uploadImages = RequestService::getFiles('images')  ;
         if( $uploadImages['error'][0] > 0){
             return false;
         }
-
             $imageNames = $uploadImages['name'];
             $imageTmpNames = $uploadImages['tmp_name'];
 
-            $getImages = self::getImagesByProductId($product_id);
-            $path = APP_UPLOAD_PRODUCT_DIR . '/' . $product_id;
-            if (!file_exists($path)) {
-                mkdir($path);
-            }
             for ($i = 0; $i < count($imageNames); $i++) {
                 $imageName = basename($imageNames[$i]);
                 $imageTmpName = $imageTmpNames[$i];
 
-                $imagePath = $path . '/' . $imageName;
+                $filename = $imageName;
+                $counter = 0;
+                while (true){
+                    $duplicateImage =  self::findByFilenameInProduct($product_id ,$filename);
+                    if(empty($duplicateImage)) {
+                        break;
+                    }
+                        $info =  pathinfo($imageName);
+                        $filename = $info['filename'];
+                        $filename .= '_' . $counter . '.' . $info['extension'];
 
-                move_uploaded_file($imageTmpName, $imagePath);
-
-                $currentImagesNames = [];
-                foreach ($getImages as $currentImageName) {
-                    $currentImagesNames[] = $currentImageName->getName();
+                        $counter++;
+                    }
                 }
+            $imagePath = $path . '/' . $filename;
+            move_uploaded_file($imageTmpName, $imagePath);
 
-                $diffImageNames = array_diff($imageNames, $currentImagesNames);
-                if (in_array($imageName, $diffImageNames)) {
-                    $data = [
-                        'product_id' => $product_id,
-                        'name' => $imageName,
-                        'path' => str_replace(APP_PUBLIC_DIR, '', $imagePath)
-                    ];
-                    self::add($data);
-                }
-            }
+            $data = [
+                'product_id' => $product_id,
+                'name' => $filename,
+                'path' => str_replace(APP_PUBLIC_DIR ,'',$imagePath),
+            ];
+            self::add($data);
     }
+
+    public static function findByFilenameInProduct(int $product_id , string $filename)
+    {
+        $query = "SELECT * FROM product_images WHERE product_id = $product_id AND name = '$filename'";
+        return DataBase()->fetchRow($query,ProductImage::class);
+    }
+
     private static function deleteDir($dir) {
         $files = array_diff(scandir($dir), array('.','..'));
         foreach ($files as $file) {
