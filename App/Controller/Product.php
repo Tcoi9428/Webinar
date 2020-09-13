@@ -29,11 +29,10 @@ class Product
         $current_page = RequestService::getIntFromGet('page',1);
         $start = $per_page * ($current_page - 1);
         $products = [
-            'count'=> ProductService::getCount(),
+            'count'=> ProductService::getCount()->getProperty('count'),
             'items'=> ProductService::getList($start , $per_page)
         ];
         $categories = CategoryService::getList();
-
         $pagination = [
             'pages'=> ceil($products['count']/$per_page),
             'current'=> $current_page

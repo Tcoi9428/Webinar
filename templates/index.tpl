@@ -1,5 +1,5 @@
 {include file="header.tpl"}
-{*<nav>
+<nav>
     <ul class="pagination pagination-sm">
         {section start=1 loop=$pagination.pages+1 name="pagination"}
             <li class="page-item {if $smarty.section.pagination.iteration == $pagination.current}active{/if}">
@@ -11,7 +11,7 @@
             </li>
         {/section}
     </ul>
-</nav>*}
+</nav>
 
 <div class="row">
 {foreach from=$products.items item=product}

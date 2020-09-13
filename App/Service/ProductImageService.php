@@ -56,10 +56,10 @@ class ProductImageService
         $images = DataBase()->fetchAll($query,ProductImage::class);
         return $images;
     }
-    public static function addImagesForProduct($product_id)
+    public static function addImagesForProduct(int $product_id ,array $importImagesUrls)
     {
         $path = self::getUploadDirForProductImages($product_id);
-        self::uploadImagesFormUrl($product_id , $path);
+        self::uploadImagesFormUrl($product_id , $path , $importImagesUrls);
         self::uploadImagesFromFileSystem($product_id , $path);
     }
 
@@ -107,9 +107,9 @@ class ProductImageService
         }
     }
 
-    public static function uploadImagesFormUrl(int $product_id , string $path)
+    public static function uploadImagesFormUrl(int $product_id , string $path ,array $importImagesUrls)
     {
-        $imageUrl = RequestService::getStringFromPost('image_url');
+
         $imageContentTypes = [
             'image/apng' => '.apng',
             'image/bmp' => '.bmp',
@@ -120,6 +120,17 @@ class ProductImageService
             'image/svg+xml' => '.svg'
         ];
 
+        if(!empty($importImagesUrls)){
+            foreach ($importImagesUrls as $imageUrl){
+                self::uploadImagesFormUrlService( $product_id, $path , $imageUrl , $imageContentTypes);
+            }
+        }
+        $imageUrl = RequestService::getStringFromPost('image_url');
+        self::uploadImagesFormUrlService( $product_id, $path , $imageUrl , $imageContentTypes);
+    }
+
+    private static function uploadImagesFormUrlService( int $product_id , string $path , string $imageUrl ,array $imageContentTypes)
+    {
         $headers = @get_headers($imageUrl);
 
         if($headers !== false){

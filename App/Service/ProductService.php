@@ -24,8 +24,7 @@ class ProductService
          * @var $result Model
          */
         $result = DataBase()->fetchRow($query,Model::class);
-
-        return (int) $result;
+        return $result;
 
     }
     public static  function getList(int $start = 0 , int $limit = 20)
@@ -61,13 +60,15 @@ class ProductService
 
         $product_id = $product->getId();
 
+        $importImagesUrls = $product->getImages();
+
         if (is_null($product_id)|| $product_id < 0){
             $product_id = DataBase()->insert('products',$data);
-             ProductImageService::addImagesForProduct($product_id);
+             ProductImageService::addImagesForProduct($product_id ,$importImagesUrls);
         }
         else{
             DataBase()->update('products' , $data , 'id='.$product_id);
-            ProductImageService::addImagesForProduct($product_id);
+            ProductImageService::addImagesForProduct($product_id ,[]);
             self::clearCategoryList($product);
         }
         self::insertCategories($product_id , $product->getCategoriesIds());
@@ -92,6 +93,15 @@ class ProductService
             die('error with image ID');
         }
     }
+
+    public static function getByField( string $mainField , string $mainFieldValue)
+    {
+        $mainField = DataBase()->escape($mainField);
+        $mainFieldValue = DataBase()->escape($mainFieldValue);
+        $query = "SELECT * FROM products WHERE `$mainField` = '$mainFieldValue'";
+        return DataBase()->fetchRow($query , Product::class);
+    }
+
     private static function insertCategories(int $product_id , array $category_ids)
     {
         $category_ids = array_unique($category_ids);
@@ -102,7 +112,6 @@ class ProductService
             ]);
         }
     }
-
 
     private static function getCategoriesIdsForProduct(Product $product) {
         $product_id = $product->getId();

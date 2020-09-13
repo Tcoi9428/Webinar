@@ -1,5 +1,4 @@
 <?php
-use App\Controller\Product;
-
+use App\Controller\Import;
 require_once $_SERVER['DOCUMENT_ROOT'] . '/../App/bootstrap.php';
-Product::list(3);
+Import::view();

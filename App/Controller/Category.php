@@ -27,11 +27,12 @@ class Category
         $category_id = RequestService::getIntFromGet('category_id');
         $categories = CategoryService::getList();
         $products = CategoryService::getProductsListByCategories($category_id);
-        self::getImagesForProduct($products);
+        self::getImagesForProducts($products);
         smarty()->assign_by_ref('products',$products);
         smarty()->assign_by_ref('categories',$categories);
         smarty()->display('categories/view.tpl');
     }
+
     public  static function edit()
     {
         $category_id = RequestService::getIntFromGet('category_id');
@@ -63,5 +64,20 @@ class Category
     private static function redirectToList()
     {
         ResponceService::redirect('/categories/');
+    }
+    private static function getImagesForProducts(array $products)
+    {
+        foreach ($products as &$product){
+            /**
+             * @var ProductModel $product
+             */
+            $id = $product->getId();
+
+            $images = ProductImageService::getImagesByProductId($id);
+            /**
+             * @var ProductModel $product
+             */
+            $product->setImages($images);
+        }
     }
 }

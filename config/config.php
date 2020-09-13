@@ -4,7 +4,7 @@ return
 [
     'db' =>[
       'host'=>'localhost',
-      'user'=>'ivan',
+      'user'=>'root',
       'password'=>'9423',
       'db_name'=>'webinar_shop'
     ],

@@ -3,6 +3,7 @@ CREATE TABLE `products` (
   `name` varchar(255) DEFAULT NULL,
   `price` float unsigned NOT NULL DEFAULT 0,
   `amount` int(10) unsigned NOT NULL DEFAULT 0,
+  `article` varchar(255) DEFAULT NULL,
   `description` text,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -37,7 +38,7 @@ CREATE TABLE `users` (
 CREATE TABLE `product_images` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `product_id` int(10) unsigned NOT NULL,
-  `category_id` int(10) unsigned NOT NULL,
   `path` varchar(255) NOT NULL DEFAULT '',
+  `name` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

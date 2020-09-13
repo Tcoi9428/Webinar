@@ -43,7 +43,7 @@
                     <a class="nav-link" href="/categories/index.php">Список категорий</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="/import/index.php">Импорт</a>
                 </li>
             </ul>
         </div>

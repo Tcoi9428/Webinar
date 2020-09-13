@@ -26,6 +26,12 @@ class CategoryService
         return $category;
     }
 
+    public static function getByName(string $categoryName)
+    {
+        $query = "SELECT * FROM categories WHERE name='$categoryName'";
+        return DataBase()->fetchRow($query,Category::class);
+    }
+
     public static function save(Category $category)
     {
         $category_id = RequestService::getIntFromPost('category_id');

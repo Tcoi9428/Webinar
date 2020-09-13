@@ -20,9 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41bfa380-7fd4-4b79-833d-c01cf9e38cc3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/App/Controller/Import.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/import/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/import/upload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/import/index.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Webinar_shop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Webinar_shop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controller/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controller/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controller/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controller/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Model/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Service/CategoryService.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Service/CategoryService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Service/ProductImageService.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Service/ProductImageService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/templates/compile/%%E2^E24^E244E49B%%edit.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/templates/compile/%%E2^E24^E244E49B%%edit.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Service/ProductService.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Service/ProductService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/tables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/templates/compile/%%45^45E^45E480CD%%index.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/templates/compile/%%45^45E^45E480CD%%index.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/templates/compile/%%8B^8BC^8BC89C66%%header.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/templates/compile/%%8B^8BC^8BC89C66%%header.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/templates/compile/%%F7^F7F^F7F34188%%header.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/templates/compile/%%F7^F7F^F7F34188%%header.tpl.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +73,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/smarty/smarty" />
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/smarty/smarty" />
     </include_path>
   </component>
   <component name="PhpXdebugProxy" ide_key="PHPSTORM" host="localhost" />
@@ -74,9 +94,9 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Timur_Webinar_shop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -122,6 +142,9 @@
       <workItem from="1599200880955" duration="15981000" />
       <workItem from="1599282125485" duration="876000" />
       <workItem from="1599287147459" duration="5455000" />
+      <workItem from="1599926363271" duration="960000" />
+      <workItem from="1599977887895" duration="5091000" />
+      <workItem from="1599982993726" duration="20311000" />
     </task>
     <servers />
   </component>
@@ -176,10 +199,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2609" y="0" width="523" height="1032" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1032/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598700633056" />
-    <state x="693" y="312" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599127830334">
-      <screen x="0" y="0" width="1920" height="1032" />
+    <state x="693" y="1407" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599995159829">
+      <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="693" y="274" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1597569685804" />
+    <state x="693" y="1407" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1599995159829" />
     <state x="693" y="312" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.117.1920.1080/0.0.1920.1032@0.0.1920.1032" timestamp="1599127830334" />
     <state x="662" y="429" width="586" height="282" key="ComposerInitDialogKey" timestamp="1596983773004">
       <screen x="0" y="0" width="1920" height="905" />
@@ -238,20 +262,23 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state width="1870" height="330" key="GridCell.Tab.2.right/1920.117.1920.1080/0.0.1920.1032@0.0.1920.1032" timestamp="1599224712456" />
-    <state x="2577" y="225" width="596" height="588" key="NewPhpClassDialog" timestamp="1598700847149">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="657" y="1305" width="641" height="588" key="NewPhpClassDialog" timestamp="1599979151872">
+      <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="2577" y="225" width="596" height="588" key="NewPhpClassDialog/0.0.1920.1032/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598700847149" />
+    <state x="657" y="1305" width="641" height="588" key="NewPhpClassDialog/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1599979151872" />
     <state x="2577" y="342" width="596" height="588" key="NewPhpClassDialog/1920.117.1920.1080/0.0.1920.1032@1920.117.1920.1080" timestamp="1597645811999" />
-    <state x="733" y="501" width="444" height="160" key="NewPhpFileDialog" timestamp="1599127298291">
-      <screen x="0" y="0" width="1920" height="1032" />
+    <state x="733" y="1604" width="399" height="156" key="NewPhpFileDialog" timestamp="1599979469582">
+      <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="733" y="439" width="444" height="160" key="NewPhpFileDialog/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1597257614509" />
+    <state x="733" y="1604" width="399" height="156" key="NewPhpFileDialog/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1599979469582" />
     <state x="733" y="501" key="NewPhpFileDialog/1920.117.1920.1080/0.0.1920.1032@0.0.1920.1032" timestamp="1599127298291" />
-    <state x="2181" y="324" width="1468" height="737" key="SettingsEditor" timestamp="1599224608358">
-      <screen x="1920" y="117" width="1920" height="1080" />
+    <state x="321" y="0" width="1022" height="1015" key="SettingsEditor" timestamp="1599983634346">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="434" y="151" width="1052" height="737" key="SettingsEditor/0.0.1920.905/1920.185.1366.768@0.0.1920.905" timestamp="1597258444333" />
+    <state x="321" y="0" width="1022" height="1015" key="SettingsEditor/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1599983634346" />
     <state x="2181" y="324" width="1468" height="737" key="SettingsEditor/1920.117.1920.1080/0.0.1920.1032@0.0.1920.1032" timestamp="1599224608358" />
     <state x="2354" y="269" key="SettingsEditor/1920.117.1920.1080/0.0.1920.1032@1920.117.1920.1080" timestamp="1598872305749" />
     <state x="761" y="379" width="411" height="266" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1599052459200">
